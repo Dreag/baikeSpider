@@ -64,7 +64,7 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'baikeSpider.pipelines.DataSubmitJsonFile': 1,
+    'baikeSpider.pipelines.DataSubmitTxtFile': 1,
     # 'baikeSpider.pipelines.BaikespiderPipeline': 300,
 }
 

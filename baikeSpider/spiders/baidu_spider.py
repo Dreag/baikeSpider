@@ -26,6 +26,9 @@ class baiduSpider(CrawlSpider):
         item = BaikespiderItem()
         # response.selector.register_namespace('d', 'https://baike.baidu.com')
         item['link'] = str(response)
+
+        item['relation'] = [''.join(('https://baike.baidu.com',i)) for i in response.xpath('//div[@id="slider_relations"]/ul/li//a/@href').extract()]
+
         item['original_page'] = response.text
         item['original_page_title'] = response.xpath('head/title/text()').extract()[0]
 
